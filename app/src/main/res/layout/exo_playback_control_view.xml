@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_allcontrols"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#cc000000"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/testinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp">
+
+        <LinearLayout
+            android:id="@+id/ll_seekbar_time"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="center_vertical"
+            android:foregroundGravity="center"
+            android:gravity="center_vertical"
+            android:layoutDirection="locale"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_channel_logo"
+                style="@style/ExoMediaButton.ChannelLogo"
+                android:layout_width="80sp"
+                android:layout_height="55sp"
+                android:layout_marginStart="25sp"
+                android:layout_marginEnd="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_epgLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="2dp"
+                android:layoutDirection="locale">
+
+                <TextView
+                    android:id="@+id/tv_current_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="250dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Now: Loading..."
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/progressBar"
+                    android:layout_alignEnd="@+id/progressBar"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_below="@+id/tv_current_program"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:progressDrawable="@drawable/epgprogress"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_next_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_marginEnd="250dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="Next: Loading..."
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_next_program_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_alignEnd="@+id/progressBar"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="4dp">
+
+            <ImageButton
+                android:id="@+id/btn_aspect_ratio"
+                style="@style/ExoMediaButton.AspectRatio"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_prevv"
+                style="@style/ExoMediaButton.Previous"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_rew"
+                style="@style/ExoMediaButton.Rewind"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/exo_shuffle"
+                style="@style/ExoMediaButton.Shuffle"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_repeat_toggle"
+                style="@style/ExoMediaButton"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_play"
+                style="@style/ExoMediaButton.Play"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_pause"
+                style="@style/ExoMediaButton.Pause"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_ffwd"
+                style="@style/ExoMediaButton.FastForward"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/exo_nextt"
+                style="@style/ExoMediaButton.Next"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/exo_subtitlee"
+                style="@style/ExoMediaButton.Subtitle"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/exo_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="#ffbebebe"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:id="@+id/exo_progress"
+                android:layout_width="0dp"
+                android:layout_height="26dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/exo_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="#ffbebebe"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

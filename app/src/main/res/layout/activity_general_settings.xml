@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/time_format_background"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            android:background="#ff343d46"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="gone"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="7.0dip"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="@string/account_info"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120.0dip"
+                android:layout_height="40.0dip"
+                android:focusable="false"
+                android:src="@drawable/full_white_logo" />
+
+            <TextView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toEndOf="@+id/logo"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/separator"
+                android:gravity="center"
+                android:text="@string/settings_small"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/separator_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/textView"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/textView_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/separator_second"
+                android:gravity="center"
+                android:text="@string/general_settings"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="15.0dip"
+                android:layout_marginEnd="10.0dip"
+                android:layout_toStartOf="@+id/date"
+                android:gravity="center"
+                android:text="06:30 am"
+                android:textColor="@android:color/white"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4.0dip"
+                android:gravity="center"
+                android:text="Monday,Janurary 12"
+                android:textColor="#ffcccccc"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginEnd="55.0dip"
+                        android:background="#802a3543"
+                        android:paddingBottom="25.0sp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_account_info"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5.0dip"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12.0dip"
+                                android:layout_marginBottom="12.0dip"
+                                android:text="@string/general_settings"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_account_info">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:descendantFocusability="beforeDescendants"
+                                android:focusableInTouchMode="true"
+                                android:orientation="vertical">
+
+                                <CheckBox
+                                    android:id="@+id/auto_start"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40.0dip"
+                                    android:padding="10.0dip"
+                                    android:tag="3"
+                                    android:text="@string/auto_statrt_bootup"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    app:buttonTint="@color/white">
+
+                                    <requestFocus />
+                                </CheckBox>
+
+                                <CheckBox
+                                    android:id="@+id/epg_full"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40.0dip"
+                                    android:padding="10.0dip"
+                                    android:tag="3"
+                                    android:text="@string/show_full_epg"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    app:buttonTint="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/subtitles_default"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40.0dip"
+                                    android:padding="10.0dip"
+                                    android:tag="3"
+                                    android:text="@string/show_subtitle"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    android:visibility="visible"
+                                    app:buttonTint="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/autoplay"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="40.0dip"
+                                    android:padding="10.0dip"
+                                    android:tag="6"
+                                    android:text="@string/enable_autoplay_videos"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    android:visibility="visible"
+                                    app:buttonTint="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_useragent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="12.0dip"
+                                    android:layout_marginBottom="12.0dip"
+                                    android:focusable="true"
+                                    android:paddingStart="20.0dip"
+                                    android:text="@string/set_user_agent"
+                                    android:textColor="@color/white"
+                                    android:textSize="20.0sp" />
+
+                                <EditText
+                                    android:id="@+id/et_user_agent"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.0dip"
+                                    android:layout_marginEnd="15.0dip"
+                                    android:background="@drawable/selector_login_fields"
+                                    android:fontFamily="@string/font_family_regular"
+                                    android:hint="@string/user_agent"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:paddingStart="20.0dip"
+                                    android:paddingTop="15.0dip"
+                                    android:paddingEnd="15.0dip"
+                                    android:paddingBottom="15.0dip"
+                                    android:tag="5"
+                                    android:textColorHint="@color/white" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="12.0dip"
+                                    android:layout_marginBottom="12.0dip"
+                                    android:paddingStart="20.0dip"
+                                    android:text="@string/multi_language"
+                                    android:textColor="@color/white"
+                                    android:textSize="20.0sp" />
+
+                                <Spinner
+                                    android:id="@+id/language_select"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.0dip"
+                                    android:layout_marginTop="10.0dip"
+                                    android:layout_marginEnd="15.0dip"
+                                    android:background="@drawable/selector_login_fields"
+                                    android:entries="@array/language_array"
+                                    android:focusable="true"
+                                    android:nextFocusDown="@+id/bt_save_changes"
+                                    android:paddingStart="20.0dip"
+                                    android:paddingTop="15.0dip"
+                                    android:paddingEnd="15.0dip"
+                                    android:paddingBottom="15.0dip"
+                                    android:prompt="@string/choose_your_language"
+                                    android:tag="4"
+                                    android:textDirection="locale" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55.0dip"
+                        android:layout_marginEnd="55.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+                        <Button
+                            android:id="@+id/bt_save_changes"
+                            android:layout_width="0.0dip"
+                            android:layout_height="50.0sp"
+                            android:layout_margin="20.0dip"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/back_btn_effect"
+                            android:focusable="true"
+                            android:nextFocusUp="@+id/rb_12hr"
+                            android:tag="1"
+                            android:text="@string/save_changes"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <Button
+                            android:id="@+id/btn_back_playerselection"
+                            android:layout_width="0.0dip"
+                            android:layout_height="50.0sp"
+                            android:layout_margin="20.0dip"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/logout_btn_effect"
+                            android:focusable="true"
+                            android:tag="2"
+                            android:text="@string/back_button"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/logout_icon_menu"
+        android:title="@string/nav_play" />
+    <item
+        android:id="@+id/nav_play_with_cast"
+        android:icon="@drawable/home_icon_black"
+        android:title="@string/play_with_cast" />
+</menu>

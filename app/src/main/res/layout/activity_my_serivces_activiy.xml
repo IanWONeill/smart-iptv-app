@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:layoutDirection="locale"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120.0dip"
+            android:layout_height="44.0dip"
+            android:focusable="false"
+            android:layoutDirection="locale"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/my_services"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="06:30 am"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4.0dip"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textDirection="locale"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="50.0dip"
+        android:layout_marginBottom="40.0dip"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="2.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:layoutDirection="locale"
+            android:weightSum="3.0">
+
+            <LinearLayout
+                android:id="@+id/ll_active"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/active_drawable"
+                android:baselineAligned="false"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="1"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/iv_service_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_active"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/active_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_active_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:maxLines="1"
+                            android:text="1"
+                            android:textColor="@color/active_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/active"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="13.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_active" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pending"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/ticket_dashboard_drawable"
+                android:baselineAligned="false"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="3"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_pending"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/ticket_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_pending_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/ticket_box_end"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_service_pending"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="13.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_pending" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_suspended"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/suspended_dashboard_drawable"
+                android:baselineAligned="false"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="4"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/iv_suspended_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_suspended"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/suspended_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_suspended_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:maxLines="1"
+                            android:text="1"
+                            android:textColor="@color/suspended_box_end"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_service_suspended"
+                        android:textColor="@color/white"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_suspended" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layoutDirection="locale" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:baselineAligned="false"
+            android:layoutDirection="locale"
+            android:weightSum="3.0">
+
+            <LinearLayout
+                android:id="@+id/ll_terminated"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/terminated_dashboard_drawable"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="5"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_terminated"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/terminated_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_terminated_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/terminated_box_end"
+                            android:textDirection="locale"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_service_terminated"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_terminated" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_cancelled"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/cancel_box"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="2"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_cancelled"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/cannel_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_cancelled_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/cannel_box_end"
+                            android:textDirection="locale"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_service_cancelled"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="13.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_cancelled" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fraud"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/fraud_dashboard_drawable"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="6"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_fraud"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/fraud_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_fraud_count"
+                            android:layout_width="30.0sp"
+                            android:layout_height="30.0sp"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/fraud_box_end"
+                            android:textDirection="locale"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_service_fraud"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="13.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_fraud" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layoutDirection="locale" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_movie"
+    android:layout_width="wrap_content"
+    android:layout_height="200.0dip"
+    android:background="@drawable/selector_vod_layout"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingStart="4.0dip"
+    android:paddingTop="4.0dip"
+    android:paddingEnd="4.0dip"
+    android:paddingBottom="4.0dip">
+
+    <RelativeLayout
+        android:id="@+id/card_view"
+        android:layout_width="140.0dip"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="200.0dip">
+
+            <ImageView
+                android:id="@+id/iv_movie_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/noposter"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_favourite"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginEnd="1.0dip"
+                android:background="@drawable/selector_favourite_vod"
+                android:src="@drawable/favourite_yellow" />
+
+            <TextView
+                android:id="@+id/tv_movie_name1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="0.0dip"
+                android:layout_marginEnd="0.0dip"
+                android:background="#90000000"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:paddingStart="5.0dip"
+                android:paddingTop="5.0dip"
+                android:paddingBottom="5.0dip"
+                android:text="@string/loading"
+                android:textColor="@color/white"
+                android:textSize="12.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="60.0dip"
+            android:layout_below="@+id/rl_movie_poster"
+            android:layout_gravity="bottom"
+            android:background="#ffffffff"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_loading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:id="@+id/tv_movie_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:text="@string/loading"
+                    android:textColor="@color/black"
+                    android:textSize="11.0dip" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="60.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tv_streamOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/selector_menu"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="25.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            android:background="#ff343d46"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/tv_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_marginBottom="12.0dip"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="@string/live_tv"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@color/colorAccent"
+            android:visibility="gone" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/light_gray"
+            android:clickable="true"
+            android:paddingStart="16.0dip"
+            android:paddingTop="16.0dip"
+            android:paddingEnd="16.0dip"
+            android:paddingBottom="16.0dip">
+
+            <TextView
+                android:id="@+id/tv_view_provider"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="gridView"
+                android:visibility="invisible" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tv_noStream"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60.0dip"
+                android:fontFamily="@string/font_family_thin"
+                android:gravity="center"
+                android:text="@string/no_video_found"
+                android:textAlignment="center"
+                android:textSize="30.0dip"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/pb_loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sliding_tabs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50.0dip"
+                android:indeterminate="true" />
+
+            <TextView
+                android:id="@+id/tv_no_record_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60.0dip"
+                android:fontFamily="@string/font_family_thin"
+                android:gravity="center"
+                android:text="@string/no_record_found"
+                android:textSize="30.0dip"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

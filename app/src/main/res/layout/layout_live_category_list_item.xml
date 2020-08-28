@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_category1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_checkbox"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip">
+
+        <TextView
+            android:id="@+id/tv_category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginEnd="18.0dip"
+            android:fontFamily="@string/font_family_regular"
+            android:textColor="@color/white"
+            android:textSize="15.0dip" />
+
+        <ImageView
+            android:id="@+id/iv_lock_staus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20.0dip"
+            android:src="@drawable/lock_open" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/rl_category"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:background="@color/service_status_terminated" />
+</RelativeLayout>

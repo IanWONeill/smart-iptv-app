@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="70.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginEnd="70.0dip"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="140.0dip"
+            android:layout_height="80.0dip"
+            android:focusable="false"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5.0dip"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:text="@string/title_tickets"
+            android:textColor="@color/light_gray"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@+id/iv_fab"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|right"
+            android:layout_marginStart="15.0dip"
+            android:paddingEnd="20.0dip"
+            android:tag="7"
+            app:srcCompat="@drawable/add_more_user" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recycleview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="40.0dip"
+        android:layout_marginEnd="40.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:orientation="vertical"
+        android:weightSum="10.2">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_weight="10.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_no_support_ticket"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:text="@string/no_support_ticket"
+                android:textColor="@color/white"
+                android:textSize="20.0sp"
+                android:visibility="gone" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress"
+                style="@style/SpinKitView.Large.FadingCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.2" />
+
+        <LinearLayout
+            android:id="@+id/ll_floating_button"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_gravity="center"
+            android:layout_weight="2.0"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

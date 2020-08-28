@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/movie_info_bg"
+    android:orientation="vertical"
+    app:layout_goneMarginTop="20.0dip">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150.0dip"
+            android:layout_height="50.0dip"
+            android:focusable="false"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:text="@string/settings_small"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/settings"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/separator2"
+            android:gravity="center"
+            android:text="@string/rate_us_text"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="10.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:gravity="center"
+            android:text="06:30 am"
+            android:textColor="@android:color/white"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingEnd="30.0sp"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70.0dip"
+            android:layout_marginEnd="70.0dip"
+            android:background="#802a3543"
+            android:orientation="vertical"
+            android:paddingTop="15.0dip"
+            android:paddingBottom="10.0dip">
+
+            <TextView
+                android:id="@+id/tv_parental_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/rate_us_text"
+                android:textColor="@color/white"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_div"
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:layout_marginTop="15.0dip"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    app:srcCompat="@drawable/ic_ratingbar" />
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginStart="10.0dip"
+                    app:srcCompat="@drawable/ic_ratingbar" />
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginStart="10.0dip"
+                    app:srcCompat="@drawable/ic_ratingbar" />
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginStart="10.0dip"
+                    app:srcCompat="@drawable/ic_ratingbar" />
+
+                <ImageView
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginStart="10.0dip"
+                    app:srcCompat="@drawable/ic_ratingbar" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:fontFamily="@string/font_family_medium"
+                android:gravity="center"
+                android:paddingStart="20.0dip"
+                android:paddingEnd="20.0dip"
+                android:text="@string/rate_us"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_rateus"
+                    android:layout_width="150.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/logout_btn_effect"
+                    android:gravity="center"
+                    android:tag="1"
+                    android:text="@string/rate_us_text"
+                    android:textColor="@color/white"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/btn_later"
+                    android:layout_width="150.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center|right"
+                    android:layout_marginStart="30.0dip"
+                    android:background="@drawable/blue_btn_effect"
+                    android:gravity="center"
+                    android:tag="2"
+                    android:text="@string/remember_me_later"
+                    android:textColor="@color/white"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

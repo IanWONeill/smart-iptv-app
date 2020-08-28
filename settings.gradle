@@ -1,0 +1,2 @@
+rootProject.name='SXTV2'
+include ':app'

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/parental_control_background"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            android:background="#ff343d46"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="gone"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="7.0dip"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="@string/account_info"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/tv_header_title"
+            android:layout_width="2000.0dip"
+            android:layout_height="80.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="5.0dip"
+            android:src="@drawable/logo_home"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120.0dip"
+                android:layout_height="40.0dip"
+                android:focusable="false"
+                android:src="@drawable/full_white_logo" />
+
+            <TextView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toEndOf="@+id/logo"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/separator"
+                android:gravity="center"
+                android:text="@string/settings_small"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/separator_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/textView"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/textView_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@+id/separator_second"
+                android:gravity="center"
+                android:text="@string/parental_contol"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="15.0dip"
+                android:layout_marginEnd="10.0dip"
+                android:layout_toStartOf="@+id/date"
+                android:gravity="center"
+                android:text="06:30 am"
+                android:textColor="@android:color/white"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4.0dip"
+                android:gravity="center"
+                android:text="Monday,Janurary 12"
+                android:textColor="#ffcccccc"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/fragment_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

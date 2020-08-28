@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_movie"
+    android:layout_width="wrap_content"
+    android:layout_height="75.0dip"
+    android:layout_marginStart="50.0dip"
+    android:layout_marginTop="10.0dip"
+    android:layout_marginEnd="50.0dip"
+    android:background="@drawable/selector_vod_layout"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:focusable="true"
+        card_view:cardElevation="2.0dip"
+        card_view:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_poster"
+            android:layout_width="70.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginStart="3.0dip"
+            android:layout_marginTop="2.0dip">
+
+            <ImageView
+                android:id="@+id/iv_movie_image"
+                android:layout_width="70.0dip"
+                android:layout_height="60.0dip"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:id="@+id/iv_recent_watch"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/recent_watch"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_favourite"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="end|center"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginEnd="40.0dip"
+            android:background="@drawable/selector_favourite_vod"
+            android:src="@drawable/favourite_yellow" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="20.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="10.0dip"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_streamOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5.0dip"
+                android:background="@drawable/selector_menu"
+                android:text="⋮"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="25.0dip" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="60.0dip"
+            android:layout_gravity="start"
+            android:layout_marginStart="85.0dip"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginEnd="75.0dip">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_loading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="2.0dip"
+                android:background="#ffffffff"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_movie_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    android:ellipsize="marquee"
+                    android:paddingStart="4.0dip"
+                    android:text="@string/loading"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

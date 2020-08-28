@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/routing_background">
+
+    <ImageView
+        android:id="@+id/iv_splash_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/routing_background"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="250.0dip"
+        android:layout_height="180.0dip"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70.0dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo"
+        android:visibility="visible" />
+
+    <com.nst.yourname.miscelleneious.FullScreenVideoView
+        android:id="@+id/video_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

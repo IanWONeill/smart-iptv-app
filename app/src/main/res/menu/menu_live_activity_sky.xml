@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon_black"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/menu_load_channels_vod1"
+        android:icon="@drawable/refresh_icon"
+        android:title="@string/load_channels_vod" />
+    <item
+        android:id="@+id/menu_load_tv_guide1"
+        android:icon="@drawable/guide_icon_menu"
+        android:title="@string/load_tv_guide" />
+    <item
+        android:id="@+id/menu_sort"
+        android:icon="@drawable/sort"
+        android:title="@string/sort_optn" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings_icon_black"
+        android:title="@string/menu_settings" />
+</menu>

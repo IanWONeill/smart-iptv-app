@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_expandable"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:fontFamily="@string/font_family_regular"
+                android:gravity="center|left"
+                android:padding="10.0dip"
+                android:paddingStart="10.0dip"
+                android:paddingLeft="10.0dip"
+                android:text="Reply"
+                android:textColor="@android:color/black"
+                android:textSize="14.0dip"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:background="#21000000"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="fill_parent"
+                android:layout_height="120.0dip"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/edit_text_rounded_background"
+                android:fontFamily="@string/font_family_regular"
+                android:gravity="start"
+                android:hint="@string/message_hint"
+                android:padding="10.0dip"
+                android:paddingStart="10.0dip"
+                android:textSize="15.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip"
+                android:background="#21000000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/et_message"
+                android:layout_gravity="center"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2.6">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/logout_btn_effect"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2" />
+
+                <Button
+                    android:id="@+id/bt_cancel_reply"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/back_btn_effect"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

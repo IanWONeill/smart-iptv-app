@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/controls"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="1.0"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/exo_pause"
+            android:layout_width="58.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_checkbox"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground"
+            android:padding="15.0dip"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/hplib_ic_pause" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/exo_play"
+            android:layout_width="58.0dip"
+            android:layout_height="48.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_checkbox"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground"
+            android:padding="15.0dip"
+            android:visibility="visible"
+            app:srcCompat="@drawable/hplib_ic_play_download" />
+    </RelativeLayout>
+</RelativeLayout>

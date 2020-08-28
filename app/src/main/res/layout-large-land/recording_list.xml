@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_list_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15.0dip"
+    android:layout_marginTop="10.0dip"
+    android:layout_marginEnd="15.0dip"
+    android:layout_marginBottom="10.0dip"
+    android:background="@drawable/selector_list_categories"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/tv_logo"
+        android:layout_width="50.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="10.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingBottom="2.0dip"
+        android:src="@drawable/series_icon" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginEnd="50.0dip">
+
+        <TextView
+            android:id="@+id/tv_recordings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginEnd="40.0dip"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/live_sky_text"
+            android:textDirection="locale"
+            android:textSize="20.0sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_recordings"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginBottom="12.0dip">
+
+            <TextView
+                android:id="@+id/file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15.0dip"
+                android:layout_marginEnd="5.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/file_size"
+                android:textColor="@color/live_sky_text"
+                android:textDirection="locale"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:layout_toEndOf="@+id/file_size"
+                android:gravity="center_vertical"
+                android:text="4.39 MB"
+                android:textColor="@color/live_sky_text"
+                android:textDirection="locale"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15.0dip"
+                android:layout_marginEnd="5.0dip"
+                android:gravity="center_vertical"
+                android:text="@string/recording_date"
+                android:textColor="@color/live_sky_text"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:layout_toEndOf="@+id/date"
+                android:gravity="center_vertical"
+                android:text="2016-02-02"
+                android:textColor="@color/live_sky_text"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15.0dip"
+                android:layout_marginEnd="5.0dip"
+                android:layout_toStartOf="@+id/tv_time"
+                android:gravity="center_vertical"
+                android:text="@string/recording_time"
+                android:textColor="@color/live_sky_text"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:gravity="center_vertical"
+                android:text="13:04:20"
+                android:textColor="@color/live_sky_text"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_delete_recording"
+            android:layout_width="40.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0.0dip"
+            android:background="@drawable/selector_favourite_vod"
+            android:src="@drawable/stop_icon"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

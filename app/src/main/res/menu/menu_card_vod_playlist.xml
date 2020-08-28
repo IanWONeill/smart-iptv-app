@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/play"
+        android:title="@string/nav_play" />
+    <item
+        android:id="@+id/nav_play_with_vlc"
+        android:icon="@drawable/play"
+        android:title="@string/play_with_vlc_player"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_play_with_mx"
+        android:icon="@drawable/play"
+        android:title="@string/play_with_mx_player"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_add_to_fav"
+        android:title="@string/add_to_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_fav"
+        android:title="@string/remove_from_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_delete_from_recentwatch"
+        android:title="@string/delete"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_move_to_live"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_live"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_move_to_movie"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_movies"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_move_to_series"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_series"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_live"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_live"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_movies"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_movies"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_series"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_series"
+        android:visible="false" />
+</menu>

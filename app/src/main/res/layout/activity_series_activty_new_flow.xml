@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="locale">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="65.0dip"
+            android:layout_centerInParent="true"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="visible"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layoutDirection="locale">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="120.0dip"
+                    android:layout_height="90.0dip"
+                    android:focusable="false"
+                    android:paddingStart="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="10.0dip"
+                    android:src="@drawable/full_white_logo" />
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13.0dip"
+                    android:layout_marginEnd="120.0dip"
+                    android:layout_marginBottom="12.0dip"
+                    android:layout_toStartOf="@+id/catch_up"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="HOME SCREEN"
+                    android:textColor="@color/white"
+                    android:textSize="11.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:paddingStart="65.0dip"
+                    android:text="@string/series"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layoutDirection="locale"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_vod_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/appbar_toolbar"
+            android:focusable="false"
+            android:layoutDirection="locale">
+
+            <ProgressBar
+                android:id="@+id/pb_loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50.0dip"
+                android:indeterminate="true" />
+
+            <RelativeLayout
+                android:id="@+id/adView"
+                android:layout_width="400.0dip"
+                android:layout_height="50.0sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:layoutDirection="locale"
+                android:paddingStart="30.0dip"
+                android:paddingEnd="30.0dip" />
+
+            <ProgressBar
+                android:id="@+id/pb_paging_loader"
+                style="?android:progressBarStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="60.0dip"
+                android:fontFamily="@string/font_family_thin"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="30.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_bt_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:src="@drawable/lb_ic_nav_arrow"
+                android:visibility="gone" />
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fl_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="?android:colorBackground"
+                android:clickable="true"
+                android:layoutDirection="locale"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

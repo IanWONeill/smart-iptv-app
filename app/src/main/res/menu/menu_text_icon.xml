@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:orderInCategory="101"
+        android:title="@string/media_route_menu_title"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/empty"
+        android:icon="@drawable/menu_dots"
+        android:orderInCategory="102"
+        android:title="inner"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_logout"
+                android:icon="@drawable/logout_icon_menu"
+                android:orderInCategory="100"
+                android:title="@string/menu_logout" />
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home_icon_black"
+                android:title="@string/menu_home" />
+            <item
+                android:id="@+id/menu_load_channels_vod"
+                android:icon="@drawable/refresh_icon"
+                android:title="@string/load_channels_vod" />
+            <item
+                android:id="@+id/menu_load_tv_guide"
+                android:icon="@drawable/guide_icon_menu"
+                android:title="@string/load_tv_guide" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/settings_icon_black"
+                android:title="@string/menu_settings" />
+        </menu>
+    </item>
+</menu>

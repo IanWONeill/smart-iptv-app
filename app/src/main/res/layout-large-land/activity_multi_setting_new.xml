@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/time_format_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120.0dip"
+            android:layout_height="40.0dip"
+            android:focusable="false"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:text="@string/settings_small"
+            android:textColor="@color/light_gray"
+            android:textSize="19.0sp" />
+
+        <TextView
+            android:id="@+id/separator_second"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/textView"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/textView_second"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator_second"
+            android:gravity="center"
+            android:text="@string/multi_settings"
+            android:textColor="@color/light_gray"
+            android:textSize="19.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginEnd="50.0dip"
+        android:layout_marginBottom="50.0dip"
+        android:background="#802a3543"
+        android:orientation="vertical"
+        android:weightSum="4.0">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/choose_screen_layout"
+            android:textColor="@color/white"
+            android:textSize="22.0sp" />
+
+        <CheckBox
+            android:id="@+id/show_popup"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_gravity="start"
+            android:layout_marginStart="50.0dip"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:gravity="start|center"
+            android:tag="4"
+            android:text="@string/show_popup"
+            android:textColor="@color/white"
+            android:textSize="21.0sp" />
+
+        <requestFocus />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginStart="55.0dip"
+            android:layout_weight="1.0"
+            android:gravity="start|center"
+            android:weightSum="1.0">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="10.0dip"
+                android:layout_weight="0.5"
+                android:gravity="start|center"
+                android:text="@string/choose_screen"
+                android:textColor="@color/white"
+                android:textSize="21.0sp" />
+
+            <Button
+                android:id="@+id/btn_multi"
+                android:layout_width="0.0dip"
+                android:layout_height="70.0dip"
+                android:layout_margin="15.0dip"
+                android:layout_weight="0.2"
+                android:background="@drawable/black_button_dark"
+                android:focusable="true"
+                android:tag="1"
+                android:text="@string/select"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+
+            <ImageView
+                android:id="@+id/screen_pic"
+                android:layout_width="0.0dip"
+                android:layout_height="70.0dip"
+                android:layout_margin="5.0dip"
+                android:layout_weight="0.2"
+                android:padding="9.0dip"
+                android:src="@drawable/default_"
+                android:textSize="19.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginStart="50.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:weightSum="1.0">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="0.0dip"
+                android:layout_height="70.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_weight="0.2"
+                android:background="@drawable/black_button_dark"
+                android:focusable="true"
+                android:tag="2"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0.0dip"
+                android:layout_height="70.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_weight="0.2"
+                android:background="@drawable/black_button_dark"
+                android:focusable="true"
+                android:tag="3"
+                android:text="@string/back_button"
+                android:textColor="@color/white"
+                android:textSize="19.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

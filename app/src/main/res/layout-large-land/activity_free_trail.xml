@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/routing_background"
+    android:layoutDirection="locale"
+    android:orientation="horizontal"
+    android:weightSum="1.0">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="70.0sp"
+            android:layout_weight="0.6"
+            android:layoutDirection="locale"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.6"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="6.0">
+
+        <TextView
+            android:id="@+id/tv_enter_credentials"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toEndOf="@+id/iv_logo"
+            android:layout_weight="0.8"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/enter_detail_for_free_trail"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="27.0sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+
+        <RelativeLayout
+            android:id="@+id/rl_username"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+
+        <RelativeLayout
+            android:id="@+id/rl_password"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+
+        <RelativeLayout
+            android:id="@+id/rl_confirmpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bt_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+
+        <RelativeLayout
+            android:id="@+id/rl_already_register"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:layoutDirection="locale" />
+    </LinearLayout>
+</LinearLayout>

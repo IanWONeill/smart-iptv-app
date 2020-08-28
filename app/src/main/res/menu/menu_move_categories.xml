@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_move_to_live"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_live"
+        android:visible="true" />
+    <item
+        android:id="@+id/nav_move_to_movie"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_movies"
+        android:visible="true" />
+    <item
+        android:id="@+id/nav_move_to_series"
+        android:icon="@drawable/play"
+        android:title="@string/add_to_series"
+        android:visible="true" />
+    <item
+        android:id="@+id/nav_remove_from_live"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_live"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_movies"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_movies"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_series"
+        android:icon="@drawable/play"
+        android:title="@string/remove_from_series"
+        android:visible="false" />
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/play"
+        android:title="@string/nav_play" />
+    <item
+        android:id="@+id/nav_play_with_vlc"
+        android:icon="@drawable/play"
+        android:title="@string/play_with_vlc_player"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_play_with_mx"
+        android:icon="@drawable/play"
+        android:title="@string/play_with_mx_player"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_add_to_fav"
+        android:title="@string/add_to_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_fav"
+        android:title="@string/remove_from_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_delete_from_recentwatch"
+        android:title="@string/delete"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_view_details"
+        android:title="@string/menu_view_details" />
+    <item
+        android:id="@+id/play_with_cast"
+        android:title="@string/play_with_cast"
+        android:visible="false" />
+</menu>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="13.0dip"
+        android:layoutDirection="locale"
+        android:paddingEnd="30.0dip"
+        android:weightSum="3.0">
+
+        <ImageView
+            android:id="@+id/iv_multiuser_logo"
+            android:layout_width="120.0dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/tv_manageuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10.0dip"
+            android:text="@string/list_users"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="20.0sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_add_more"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center|right"
+                android:focusable="false"
+                android:paddingRight="5.0dip"
+                android:src="@drawable/add_more_user"
+                android:tag="7" />
+
+            <TextView
+                android:id="@+id/tv_add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5.0dip"
+                android:text="@string/add_user"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/appbar_toolbar"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layoutDirection="locale">
+
+        <com.nst.yourname.view.utility.NonSwipeableViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50.0dip"
+            android:indeterminate="true" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layoutDirection="locale"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip" />
+
+        <ProgressBar
+            android:id="@+id/pb_paging_loader"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="60.0dip"
+            android:fontFamily="@string/font_family_thin"
+            android:gravity="center_horizontal"
+            android:textDirection="locale"
+            android:textSize="30.0sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_bt_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:src="@drawable/lb_ic_nav_arrow"
+            android:visibility="gone" />
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fl_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="?android:colorBackground"
+            android:clickable="true"
+            android:layoutDirection="locale"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_noStream"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60.0dip"
+            android:fontFamily="@string/font_family_thin"
+            android:gravity="center"
+            android:text="No Category Found"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="30.0sp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_add_new_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60.0dip"
+            android:fontFamily="@string/font_family_thin"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="@string/no_record_found"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="30.0sp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="65.0dip"
+                android:layout_height="65.0dip"
+                android:focusable="true"
+                android:src="@drawable/add_more_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@string/font_family_thin"
+                android:gravity="center"
+                android:text="@string/add_new_user"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="24.0sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_no_record_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60.0dip"
+            android:fontFamily="@string/font_family_thin"
+            android:gravity="center"
+            android:text="@string/no_record_found"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="30.0sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/tv_no_record_found"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_list_options"
+                android:layout_width="fill_parent"
+                android:layout_height="25.0dip"
+                android:background="#c0040313"
+                android:gravity="center"
+                android:text="@string/long_press_to_show_more"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

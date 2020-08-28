@@ -1,0 +1,559 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nst.yourname">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.nst.yourname.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.nst.yourname.permission.C2D_MESSAGE" />
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:banner="@mipmap/tv_banner"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <provider
+            android:name="com.nst.yourname.miscelleneious.VedioFile"
+            android:authorities="com.nst.yourname.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <activity
+            android:name="com.nst.yourname.view.activity.AddedExternalPlayerActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ExternalPlayerActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SpeedTestActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.MultiSettingActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SplashActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nst.yourname.view.activity.LoginActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SettingsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ParentalControlActivitity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.NewDashboardActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.EpisodeDetailActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesDetailActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.AccountInfoActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlayerSelectionActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ImportEPGActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ImportStreamsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="redirect_live_tv" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="redirect_vod" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nst.yourname.view.activity.NewEPGActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.NewEPGCategoriesActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ViewDetailsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlayRecordingExternalPlayerActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.EPGTimeShiftActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.StreamFormatActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.TVArchiveActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SubTVArchiveActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.VodActivityNewFlowSubCategories"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.VodActivityNewFlowSecondSubCategories"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.LiveActivityNewFlow"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.TVArchiveActivityNewFlow"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.TVArchiveActivityLayout"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.TimeFormatActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.EPGChannelUpdateActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.VodActivityNewFlow"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.VodActivityLayout"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.TermsConditionPage"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.AutomationActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesActivtyNewFlow"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesActivitNewFlowSubCat"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeasonsActivitiy"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.GeneralSettingsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+
+        <receiver
+            android:name="com.nst.yourname.view.activity.BootStartupActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.nst.yourname.view.activity.YouTubePlayerActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.NotificationActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="sensorLandscape"
+            android:taskAffinity="" />
+        <activity
+            android:name="com.nst.yourname.view.activity.RecordingActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.VLCPlayerRecordingActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.MxPlayerRecordingActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.AnnouncementsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.AnnouncementAlertActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.ijkplayer.activities.NSTIJKPlayerSkyActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.ijkplayer.activities.NSTIJKPlayerVODActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.ijkplayer.activities.NSTIJKPlayerEPGActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlayerSettingsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.CheckAppupdateActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.RateUsActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.FreeTrailActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ImportM3uActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="redirect_live_tv" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="redirect_vod" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nst.yourname.view.activity.RoutingActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.LoginM3uActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.MultiUserActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="m3u" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="api" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nst.yourname.view.activity.ViewDetailsTMDBActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesDetailM3UActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlaylistsCategoriesActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlaylistActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesActivityNewFlowSubCategoriesM3U"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.SeriesActivityNewFlowM3U"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.ImportEPGXMLActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.PlayExternalPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.activity.APPInPurchaseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.ServicesDashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.MySerivcesActiviy"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.MyTicketActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.MyInvoiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.ViewTicketActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.PaidInvoiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.UnpiadInvoiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.CancelInvoiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.InvoiceRefundedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.ActiveServiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.CancelledSerivceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.PendingServiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.SuspendedServiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.TerminatedServiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.FraudServiceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.ShowserviceInformationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.OpenTicketActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.InvoicePaidDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+
+        <service android:name="com.nst.yourname.WHMCSClientapp.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.nst.yourname.WHMCSClientapp.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity
+            android:name="com.nst.yourname.WHMCSClientapp.activities.BuyNowActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.miscelleneious.chromecastfeature.ExpandedControlsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/ChromecastTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.NewDashboardActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.nst.yourname.miscelleneious.chromecastfeature.CastOptionsProvider" />
+
+        <activity
+            android:name="com.nst.yourname.view.exoplayer.NSTEXOPlayerSkyActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.exoplayer.NSTEXOPlayerVODActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name="com.nst.yourname.view.ijkplayer.activities.NSTIJKPlayerMultiActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape" />
+
+       <!-- <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
+
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.nst.yourname" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.nst.yourname.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />-->
+    </application>
+</manifest>

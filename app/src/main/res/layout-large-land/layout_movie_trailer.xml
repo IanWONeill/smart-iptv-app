@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_password_verification"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#de12161e"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="500.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20.0dip"
+            app:cardMaxElevation="10.0dip"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/ll_expandable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_parental_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25.0dip"
+                        android:drawableStart="@drawable/epg_selection_icon"
+                        android:drawablePadding="7.0dip"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text="@string/epg_expired"
+                        android:textColor="@color/black"
+                        android:textSize="20.0dip"
+                        android:visibility="gone" />>
+
+                    <ImageView
+                        android:id="@+id/iv_div"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2.0px"
+                        android:layout_below="@+id/tv_parental_password"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/et_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45.0dip"
+                        android:layout_below="@+id/tv_parental_password"
+                        android:layout_marginStart="25.0dip"
+                        android:layout_marginTop="25.0dip"
+                        android:layout_marginEnd="25.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:fontFamily="@string/font_family_regular"
+                        android:gravity="center_horizontal"
+                        android:paddingStart="10.0dip"
+                        android:text="Movie Trailer is not available"
+                        android:textColor="@color/black"
+                        android:textSize="20.0sp" />
+
+                    <Button
+                        android:id="@+id/bt_save_password"
+                        android:layout_width="150.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_below="@+id/et_password"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="40.0dip"
+                        android:layout_marginBottom="20.0dip"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:nextFocusRight="@+id/bt_close"
+                        android:nextFocusUp="@+id/et_password"
+                        android:tag="8"
+                        android:text="Ok"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp" />
+
+                    <Button
+                        android:id="@+id/bt_close"
+                        android:layout_width="150.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_below="@+id/et_password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15.0dip"
+                        android:layout_marginEnd="40.0dip"
+                        android:layout_marginBottom="20.0dip"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/bt_save_password"
+                        android:nextFocusUp="@+id/et_password"
+                        android:tag="9"
+                        android:text="@string/no"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                >
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_outer"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    android:orientation="horizontal"
+    android:weightSum="8.0">
+
+    <LinearLayout
+        android:id="@+id/ll_app_logo"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="8.0"
+        android:orientation="vertical"
+        android:weightSum="5.0">
+
+        <TextView
+            android:id="@+id/tv_appname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="dgsdga"
+            android:textColor="@color/black"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/tv_packagename"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="2.0"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

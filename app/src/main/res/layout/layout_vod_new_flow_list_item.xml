@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_outer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15.0dip"
+    android:layout_marginTop="5.0dip"
+    android:layout_marginEnd="15.0dip"
+    android:layout_marginBottom="5.0dip"
+    android:background="@drawable/selector_list_categories"
+    android:focusable="true"
+    android:layoutDirection="locale">
+
+    <RelativeLayout
+        android:id="@+id/testing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="locale">
+
+        <RelativeLayout
+            android:id="@+id/rl_list_of_categories"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@drawable/selector_list_categories"
+            android:layoutDirection="locale">
+
+            <ImageView
+                android:id="@+id/iv_tv_icon"
+                android:layout_width="30.0sp"
+                android:layout_height="30.0sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10.0dip"
+                android:src="@drawable/tv_icon" />
+
+            <TextView
+                android:id="@+id/tv_movie_category_name"
+                android:layout_width="fill_parent"
+                android:layout_height="60.0sp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20.0sp"
+                android:layout_marginEnd="95.0sp"
+                android:layout_toEndOf="@+id/iv_tv_icon"
+                android:fontFamily="@string/font_family_regular"
+                android:gravity="center_vertical"
+                android:textColor="@color/live_text"
+                android:textDirection="locale"
+                android:textSize="15.0sp" />
+
+            <ImageView
+                android:id="@+id/iv_foraward_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="20.0sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20.0dip"
+                android:src="@drawable/forward_arrow" />
+
+            <TextView
+                android:id="@+id/tv_sub_cat_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="60.0sp"
+                android:textColor="@color/live_text"
+                android:textDirection="locale"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_paging_loader"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

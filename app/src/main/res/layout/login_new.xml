@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/routing_background"
+    android:layoutDirection="locale"
+    android:orientation="horizontal"
+    android:weightSum="1.0">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="2.0">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="30.0sp"
+            android:layout_weight="1.0"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_weight="0.2"
+            android:gravity="bottom|center"
+            android:text="@string/refresh_dns"
+            android:textColor="@color/white"
+            android:textSize="14.0sp" />
+
+        <Button
+            android:id="@+id/rl_bt_refresh"
+            android:layout_width="110.0dip"
+            android:layout_height="0.0dip"
+            android:layout_gravity="center"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:layout_weight="0.18"
+            android:background="@drawable/selector_button"
+            android:focusable="true"
+            android:text="@string/refresh_dns_button"
+            android:textSize="12.0sp" />
+
+        <Button
+            android:id="@+id/btn_free_trail"
+            android:layout_width="140.0sp"
+            android:layout_height="0.0dip"
+            android:layout_gravity="center"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:layout_weight="0.3"
+            android:background="@drawable/selector_button"
+            android:text="@string/get_a_free_trail"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:weightSum="6.0">
+
+        <TextView
+            android:id="@+id/tv_enter_credentials"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@+id/iv_logo"
+            android:layout_weight="0.8"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/credential_detail"
+            android:textColor="@color/white"
+            android:textSize="27.0sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8" />
+
+        <LinearLayout
+            android:id="@+id/password_ful"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8">
+
+            <RelativeLayout
+                android:id="@+id/rl_password"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8" />
+
+            <ImageView
+                android:id="@+id/eyeicon"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="0.2"
+                android:padding="4.0dip"
+                app:srcCompat="@drawable/hidepassword" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_server_url"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bt_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8" />
+
+        <RelativeLayout
+            android:id="@+id/rl_remember_me"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.8"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_view_log"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginLeft="50.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="50.0dip"
+            android:layout_weight="0.96"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/link_transform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="0.1"
+            android:background="@drawable/selector_checkbox"
+            android:clickable="true"
+            android:drawableRight="@drawable/arrow_forward"
+            android:drawablePadding="1.0sp"
+            android:gravity="center"
+            android:text="@string/with_act_code"
+            android:textColor="@color/login_text"
+            android:textSize="18.0sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

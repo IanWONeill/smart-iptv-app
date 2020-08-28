@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_invoices"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="100.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="100.0dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_my_invoices"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_invoices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/epg_event_layout_background_selected"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3.0dip"
+                    android:background="@drawable/line_light_gray_small"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_back_press"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/backspress" />
+
+                <TextView
+                    android:id="@+id/tv_my_invoices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/parental_contol_setting"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp" />
+
+                <View
+                    android:id="@+id/view_line_my_invoices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3.0dip"
+                    android:layout_below="@+id/tv_my_invoices"
+                    android:background="@drawable/line_light_gray_small"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_invoices"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:layout_below="@+id/rl_invoices"
+                android:animateLayoutChanges="true"
+                android:background="#ffffffff"
+                android:minHeight="?actionBarSize"
+                android:textDirection="locale"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:tabBackground="@drawable/tab_color_selector"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/white"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/black" />
+
+            <View
+                android:id="@+id/line_below_tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_below="@+id/tab_layout_invoices"
+                android:background="@drawable/line_services" />
+
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/line_below_tabs"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

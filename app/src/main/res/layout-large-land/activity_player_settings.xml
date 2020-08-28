@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/player_selection_background"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            android:background="#ff343d46"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="gone"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="7.0dip"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="@string/account_info"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120.0dip"
+                android:layout_height="45.0dip"
+                android:focusable="false"
+                android:src="@drawable/full_white_logo" />
+
+            <TextView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/logo"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/separator"
+                android:gravity="center"
+                android:text="@string/settings_small"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/separator_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/textView"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/textView_second"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/separator_second"
+                android:gravity="center"
+                android:text="@string/playerSettings"
+                android:textColor="@color/light_gray"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="10.0dip"
+                android:layout_toStartOf="@+id/date"
+                android:gravity="center"
+                android:text="06:30 am"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8.0dip"
+                android:gravity="center"
+                android:paddingEnd="30.0dip"
+                android:text="Monday,Janurary 12"
+                android:textColor="#ffcccccc"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginEnd="55.0dip"
+                    android:background="#802a3543">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_account_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="12.0dip"
+                            android:layout_marginBottom="12.0dip"
+                            android:text="@string/ijk_player_set"
+                            android:textColor="@color/white"
+                            android:textSize="25.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_info"
+                        android:layout_marginStart="25.0dip"
+                        android:layout_marginEnd="25.0dip">
+
+                        <RadioGroup
+                            android:id="@+id/rg_radio"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rb_native"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40.0dip"
+                                android:padding="10.0dip"
+                                android:tag="3"
+                                android:text="@string/native_decoder"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                app:buttonTint="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/rb_hardware_decoder"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40.0dip"
+                                android:padding="10.0dip"
+                                android:tag="4"
+                                android:text="@string/hardware_decoder"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                app:buttonTint="@color/white" />
+
+                            <RadioButton
+                                android:id="@+id/rb_software_decoder"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40.0dip"
+                                android:padding="10.0dip"
+                                android:tag="5"
+                                android:text="@string/software_decoder"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                app:buttonTint="@color/white" />
+                        </RadioGroup>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55.0dip"
+                    android:layout_marginEnd="55.0dip"
+                    android:background="#802a3543"
+                    android:paddingBottom="25.0sp">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/cb_opensl_es"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="65.0dip"
+                                android:padding="10.0dip"
+                                android:tag="6"
+                                android:text="@string/enable_opensl_es"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                app:buttonTint="@color/white" />
+
+                            <CheckBox
+                                android:id="@+id/cb_opengl"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="65.0dip"
+                                android:nextFocusDown="@+id/bt_save_changes"
+                                android:padding="10.0dip"
+                                android:tag="7"
+                                android:text="@string/enable_opengl"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                app:buttonTint="@color/white" />
+
+                            <CheckBox
+                                android:id="@+id/cb_infbuf"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="65.0dip"
+                                android:padding="10.0dip"
+                                android:tag="8"
+                                android:text="@string/enable_infbuf"
+                                android:textColor="@color/white"
+                                android:textSize="20.0sp"
+                                android:visibility="gone"
+                                app:buttonTint="@color/white" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55.0dip"
+                    android:layout_marginEnd="55.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:id="@+id/bt_save_changes"
+                        android:layout_width="0.0dip"
+                        android:layout_height="50.0sp"
+                        android:layout_margin="20.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusUp="@+id/rb_mx_player"
+                        android:tag="1"
+                        android:text="@string/save_changes"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp">
+
+                        <requestFocus />
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_back_playerselection"
+                        android:layout_width="0.0dip"
+                        android:layout_height="50.0sp"
+                        android:layout_margin="20.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:tag="2"
+                        android:text="@string/back_button"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp">
+
+                        <requestFocus />
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_password_verification"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#de12161e"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20.0dip"
+                app:cardMaxElevation="10.0dip"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_expandable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.0dip"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/tv_parental_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25.0dip"
+                            android:drawableStart="@drawable/cast_genre"
+                            android:drawablePadding="7.0dip"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="@string/edit_epg_xml"
+                            android:textColor="@color/black"
+                            android:textSize="20.0sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_div"
+                            android:layout_width="fill_parent"
+                            android:layout_height="2.0dip"
+                            android:layout_below="@+id/tv_parental_password"
+                            android:layout_marginTop="15.0dip"
+                            android:background="@color/black" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_div">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_epg_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/et_epg_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="45.0dip"
+                                    android:layout_marginLeft="25.0dip"
+                                    android:layout_marginTop="25.0dip"
+                                    android:layout_marginRight="25.0dip"
+                                    android:background="@drawable/selector_verify_password_fields"
+                                    android:focusable="true"
+                                    android:fontFamily="@string/font_family_regular"
+                                    android:hint="EPG Name"
+                                    android:inputType="text"
+                                    android:nextFocusDown="@+id/et_epg_link"
+                                    android:paddingLeft="10.0dip"
+                                    android:textColorHint="@color/white" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_epg_link"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_epg_name">
+
+                                <EditText
+                                    android:id="@+id/et_epg_link"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="45.0dip"
+                                    android:layout_marginLeft="25.0dip"
+                                    android:layout_marginTop="20.0dip"
+                                    android:layout_marginRight="25.0dip"
+                                    android:background="@drawable/selector_verify_password_fields"
+                                    android:focusable="true"
+                                    android:fontFamily="@string/font_family_regular"
+                                    android:hint="@string/epg_source_link_example"
+                                    android:inputType="textUri"
+                                    android:nextFocusUp="@+id/et_epg_name"
+                                    android:nextFocusDown="@+id/bt_add_epg"
+                                    android:paddingLeft="10.0dip"
+                                    android:textColorHint="@color/white" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_browse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_epg_link"
+                                android:visibility="gone">
+
+                                <EditText
+                                    android:id="@+id/et_browse"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="45.0dip"
+                                    android:layout_marginLeft="25.0dip"
+                                    android:layout_marginTop="20.0dip"
+                                    android:layout_marginRight="25.0dip"
+                                    android:layout_toStartOf="@+id/bt_browse"
+                                    android:background="@drawable/selector_verify_password_fields"
+                                    android:focusable="true"
+                                    android:fontFamily="@string/font_family_regular"
+                                    android:hint="Path"
+                                    android:inputType="text"
+                                    android:nextFocusUp="@+id/et_epg_name"
+                                    android:nextFocusDown="@+id/bt_add_epg"
+                                    android:paddingLeft="10.0dip"
+                                    android:textColorHint="@color/white" />
+
+                                <Button
+                                    android:id="@+id/bt_browse"
+                                    android:layout_width="140.0dip"
+                                    android:layout_height="40.0dip"
+                                    android:layout_alignTop="@+id/et_browse"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="25.0dip"
+                                    android:background="@drawable/blue_btn_effect"
+                                    android:focusable="true"
+                                    android:tag="3"
+                                    android:text="Browse"
+                                    android:textColor="@color/white"
+                                    android:textSize="18.0sp"
+                                    android:visibility="visible" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_body">
+
+                            <Button
+                                android:id="@+id/bt_add_epg"
+                                android:layout_width="190.0dip"
+                                android:layout_height="40.0dip"
+                                android:layout_marginLeft="40.0dip"
+                                android:layout_marginTop="15.0dip"
+                                android:layout_marginBottom="20.0dip"
+                                android:background="@drawable/back_btn_effect"
+                                android:focusable="true"
+                                android:nextFocusRight="@+id/bt_close"
+                                android:nextFocusUp="@+id/et_epg_link"
+                                android:tag="1"
+                                android:text="@string/edit_epg"
+                                android:textColor="@color/white"
+                                android:textSize="18.0sp" />
+
+                            <Button
+                                android:id="@+id/bt_close"
+                                android:layout_width="150.0dip"
+                                android:layout_height="40.0dip"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15.0dip"
+                                android:layout_marginRight="40.0dip"
+                                android:layout_marginBottom="20.0dip"
+                                android:background="@drawable/logout_btn_effect"
+                                android:focusable="true"
+                                android:nextFocusLeft="@+id/bt_add_epg"
+                                android:nextFocusUp="@+id/et_epg_link"
+                                android:tag="2"
+                                android:text="@string/close"
+                                android:textColor="@color/white"
+                                android:textSize="18.0sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

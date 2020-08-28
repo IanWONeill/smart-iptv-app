@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_marginStart="45.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="36.0dip"
+        android:layoutDirection="locale"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="18.1">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0.0dip"
+            android:layout_height="70.0dip"
+            android:layout_weight="4.5"
+            android:focusable="false"
+            android:layoutDirection="locale"
+            android:src="@drawable/logo_white" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="12.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:layout_weight="3.0"
+            android:gravity="center|right"
+            android:layoutDirection="locale"
+            android:maxLines="1"
+            android:text="20:16"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            app:autoSizeMaxTextSize="20.0sp"
+            app:autoSizeMinTextSize="12.0sp"
+            app:autoSizePresetSizes="@array/auto_size_new_dashbroad_18to22" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="7.0dip"
+            android:layout_weight="3.6"
+            android:gravity="center|left"
+            android:layoutDirection="locale"
+            android:maxLines="1"
+            android:paddingEnd="0.0sp"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textDirection="locale"
+            app:autoSizeMaxTextSize="14.0sp"
+            app:autoSizeMinTextSize="10.0sp"
+            app:autoSizePresetSizes="@array/auto_size_new_dashbroad_10to14" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="7.0"
+            android:weightSum="4.0">
+
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="0.0dip"
+                android:layout_weight="1.0"
+                android:layoutDirection="locale"
+                android:paddingTop="22.0dip"
+                android:paddingBottom="22.0dip"
+                android:tag="7"
+                app:srcCompat="@drawable/ic_bell" />
+
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="65.0dip"
+                android:layout_height="20.0dip"
+                android:layout_below="@+id/iv_bell"
+                android:layout_toStartOf="@+id/iv_settings"
+                android:gravity="center"
+                android:text="@string/menu_account_info"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/account_info"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="0.0dip"
+                android:layout_toStartOf="@+id/iv_settings"
+                android:layout_weight="1.0"
+                android:layoutDirection="locale"
+                android:paddingTop="18.0dip"
+                android:paddingBottom="18.0dip"
+                android:src="@drawable/ic_home"
+                android:tag="7"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_account_info_button"
+                android:layout_width="65.0dip"
+                android:layout_height="20.0dip"
+                android:layout_below="@+id/account_info"
+                android:layout_toStartOf="@+id/iv_settings"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:text="@string/menu_home"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="20.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:layoutDirection="locale"
+                android:paddingTop="22.0dip"
+                android:paddingBottom="22.0dip"
+                android:src="@drawable/gear_white"
+                android:tag="7"
+                android:textDirection="locale" />
+
+            <TextView
+                android:id="@+id/tv_settings_button"
+                android:layout_width="65.0dip"
+                android:layout_height="20.0dip"
+                android:layout_below="@+id/account_info"
+                android:layout_toStartOf="@+id/switch_user"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:text="@string/menu_settings"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/switch_user"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="0.0dip"
+                android:layout_weight="1.0"
+                android:layoutDirection="locale"
+                android:paddingTop="22.0dip"
+                android:paddingBottom="22.0dip"
+                android:src="@drawable/switch_user"
+                android:tag="7"
+                android:textDirection="locale"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_switch_user_button"
+                android:layout_width="65.0dip"
+                android:layout_height="20.0dip"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:text="@string/switch_user"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center"
+        android:layoutDirection="locale"
+        android:text="@string/billing_subscriptions"
+        android:textColor="@color/white"
+        android:textDirection="locale"
+        android:textSize="20.0sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="40.0dip"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginEnd="40.0dip"
+        android:layout_marginBottom="50.0dip"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="2.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.2"
+            android:baselineAligned="false"
+            android:layoutDirection="locale"
+            android:weightSum="3.2">
+
+            <LinearLayout
+                android:id="@+id/ll_services"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/services_dashboard_drawable"
+                android:baselineAligned="false"
+                android:focusable="true"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="1"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/iv_service_count"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_service"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/service_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_service_count"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:maxLines="1"
+                            android:text="1"
+                            android:textColor="@color/service_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_services"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_myservice" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.1" />
+
+            <LinearLayout
+                android:id="@+id/ll_invoices"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/invoice_dashboard_drawable"
+                android:baselineAligned="false"
+                android:focusable="true"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="2"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_invoice"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/invoice_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_invoice_count"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/invoice_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/my_invoices"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_myinvoice" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.1"
+                android:layoutDirection="locale" />
+
+            <LinearLayout
+                android:id="@+id/ll_tickets"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/ticket_dashboard_drawable"
+                android:focusable="true"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:tag="3"
+                android:weightSum="4.8">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:layoutDirection="locale" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:background="@drawable/circle"
+                            android:layoutDirection="locale" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/pb_loader_ticket"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            android:visibility="visible"
+                            app:indicatorColor="@color/ticket_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/tv_ticket_count"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/ticket_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale"
+                        android:text="@string/tickets"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layoutDirection="locale"
+                        app:srcCompat="@drawable/ic_tickets" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layoutDirection="locale" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_buy_now"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_free_trial_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:text="@string/your_free_trial_expires_in"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_freetrai_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8.0dip"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_buy_now"
+                android:layout_width="140.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20.0dip"
+                android:background="@drawable/active_drawable"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:paddingStart="10.0dip"
+                android:paddingEnd="10.0dip"
+                android:tag="11"
+                android:text="@string/buy_now"
+                android:textColor="@color/white"
+                android:textDirection="locale" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

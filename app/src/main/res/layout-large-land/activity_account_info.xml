@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/account_background"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_centerInParent="true"
+            android:background="#ff343d46"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="gone"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="7.0dip"
+                    android:fontFamily="@string/font_family_bold"
+                    android:gravity="center"
+                    android:text="@string/account_info"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginEnd="30.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150.0dip"
+                android:layout_height="50.0dip"
+                android:focusable="false"
+                android:src="@drawable/full_white_logo" />
+
+            <TextView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/logo"
+                android:gravity="center"
+                android:text="|"
+                android:textColor="@color/light_gray"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="10.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_toEndOf="@+id/separator"
+                android:gravity="center"
+                android:text="@string/account_info_small"
+                android:textColor="@color/light_gray"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/myReseller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:textColor="@color/light_gray"
+                android:textSize="18.0sp"
+                android:layout_toEndOf="@+id/textView"
+                android:text="TextView" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/card"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="180.0sp"
+                    android:layout_marginTop="20.0sp"
+                    android:layout_marginEnd="180.0sp"
+                    android:background="#802a3543"
+                    android:paddingBottom="15.0sp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_account_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.0dip"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="12.0dip"
+                            android:layout_marginBottom="12.0dip"
+                            android:text="@string/account_info"
+                            android:textColor="@color/white"
+                            android:textSize="24.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_account_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_info"
+                        android:layout_marginStart="25.0dip">
+
+                        <TextView
+                            android:id="@+id/tv_username_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30.0dip"
+                            android:text="@string/account_username"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_status_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_username_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_status"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_expiry_date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_status_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_expiry_date"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_is_trial_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_expiry_date_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_is_trial"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_active_conn_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_is_trial_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_active_connections"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_created_at_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_active_conn_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_created_at"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_max_connections_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_created_at_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/account_max_connections"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+                        <TextView
+                            android:id="@+id/tv_myreseller_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_max_connections_label"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:text="@string/my_reseller_info"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/rl_account_info"
+                        android:layout_marginStart="40.0dip"
+                        android:layout_toEndOf="@+id/rl_account_label">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_username"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:background="#ff0cdc78"
+                            android:gravity="center"
+                            android:paddingStart="5.0dip"
+                            android:paddingEnd="5.0dip"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_expiry_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_status"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_is_trial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_expiry_date"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_active_conn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_is_trial"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_created_at"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_active_conn"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                            android:id="@+id/tv_max_connections"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_created_at"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginTop="15.0dip"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+
+                        <TextView
+                        android:id="@+id/tv_my_reseller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_max_connections"
+                        android:layout_marginStart="20.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="180.0sp"
+                    android:layout_marginEnd="180.0sp"
+                    android:layout_marginBottom="10.0sp"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:id="@+id/btn_back_account_info"
+                        android:layout_width="0.0dip"
+                        android:layout_height="50.0sp"
+                        android:layout_margin="10.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusUp="@+id/rb_12hr"
+                        android:tag="1"
+                        android:text="@string/back_button"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp">
+
+                        <requestFocus />
+                    </Button>
+
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="0.0dip"
+                        android:layout_height="50.0sp"
+                        android:layout_margin="10.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:tag="2"
+                        android:text="@string/logout"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp">
+
+                        <requestFocus />
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_buy_now"
+                        android:layout_width="0.0dip"
+                        android:layout_height="50.0sp"
+                        android:layout_margin="10.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/black_button_dark"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:tag="3"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp"
+                        android:visibility="gone">
+
+                        <requestFocus />
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

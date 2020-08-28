@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:layoutDirection="locale"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120.0dip"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:layoutDirection="locale"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/my_invoices"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="06:30 am"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4.0dip"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textDirection="locale"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="60.0dip"
+        android:layout_marginTop="25.0dip"
+        android:layout_marginEnd="60.0dip"
+        android:layout_marginBottom="30.0dip"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="2.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:baselineAligned="false"
+            android:layoutDirection="locale"
+            android:weightSum="2.0">
+
+            <LinearLayout
+                android:id="@+id/paid"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/paid_box"
+                android:baselineAligned="false"
+                android:layoutDirection="locale">
+
+                <LinearLayout
+                    android:id="@+id/gap_two"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/loader_data"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layoutDirection="locale"
+                            android:src="@drawable/circle" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/loader_show"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            app:indicatorColor="@color/paid_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/sow_no"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/paid_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layoutDirection="locale"
+                            android:text="@string/invoices_paid"
+                            android:textColor="@color/white"
+                            android:textDirection="locale"
+                            android:textSize="19.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layoutDirection="locale"
+                        android:src="@drawable/ic_paid"
+                        android:textDirection="locale" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/unpaid"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/un_paid_box"
+                android:baselineAligned="false"
+                android:layoutDirection="locale">
+
+                <LinearLayout
+                    android:id="@+id/gap"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/loader_unpaid"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layoutDirection="locale"
+                            android:src="@drawable/circle" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/loader_showup"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            app:indicatorColor="@color/unpaid_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/sow_up"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/unpaid_box_end"
+                            android:textDirection="locale"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layoutDirection="locale"
+                            android:text="@string/invoices_unpaid"
+                            android:textColor="@color/white"
+                            android:textDirection="locale"
+                            android:textSize="19.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:src="@drawable/ic_unpaid" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:baselineAligned="false"
+            android:layoutDirection="locale"
+            android:weightSum="2.0">
+
+            <LinearLayout
+                android:id="@+id/cancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/cancel_box"
+                android:layoutDirection="locale">
+
+                <LinearLayout
+                    android:id="@+id/gap4"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/loader_cancel"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layoutDirection="locale"
+                            android:src="@drawable/circle" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/loader_showcnl"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            app:indicatorColor="@color/cannel_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/sow_cnl"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/cannel_box_end"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:layoutDirection="locale">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layoutDirection="locale"
+                            android:text="@string/my_service_cancelled"
+                            android:textColor="@color/white"
+                            android:textDirection="locale"
+                            android:textSize="19.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layoutDirection="locale"
+                        android:src="@drawable/ic_cencel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/refound"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/refounded_box"
+                android:baselineAligned="false"
+                android:layoutDirection="locale">
+
+                <LinearLayout
+                    android:id="@+id/gap2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical"
+                    android:weightSum="4.0">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0"
+                        android:gravity="start|center"
+                        android:layoutDirection="locale">
+
+                        <ImageView
+                            android:id="@+id/loader_refound"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layoutDirection="locale"
+                            android:src="@drawable/circle" />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/loader_showrf"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="6.0dip"
+                            android:layoutDirection="locale"
+                            android:paddingStart="2.0sp"
+                            android:paddingEnd="2.0dip"
+                            app:indicatorColor="@color/refund_box_end"
+                            app:indicatorName="BallPulseSyncIndicator" />
+
+                        <TextView
+                            android:id="@+id/sow_rf"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:gravity="center"
+                            android:layoutDirection="locale"
+                            android:text="1"
+                            android:textColor="@color/refund_box_end"
+                            android:textSize="16.0sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="2.0">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layoutDirection="locale"
+                            android:text="@string/refound"
+                            android:textColor="@color/white"
+                            android:textSize="19.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layoutDirection="locale"
+                        android:src="@drawable/ic_refund"
+                        android:textDirection="locale" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:layoutDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

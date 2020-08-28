@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_password_verification"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20.0dip"
+                app:cardCornerRadius="8.0dip">
+
+                <LinearLayout
+                    android:id="@+id/ll_expandable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_parental_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@string/font_family_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/rate_us_text"
+                        android:textColor="@color/black"
+                        android:textSize="18.0sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_div"
+                        android:layout_width="fill_parent"
+                        android:layout_height="2.0dip"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/ic_rateus"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_marginTop="15.0dip"
+                        app:srcCompat="@drawable/ic_ratingbar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingStart="20.0dip"
+                        android:paddingEnd="20.0dip"
+                        android:text="@string/rate_us"
+                        android:textSize="16.0sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.0dip"
+                        android:layout_marginBottom="30.0dip"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3.9">
+
+                        <LinearLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+
+                        <Button
+                            android:id="@+id/btn_rateus"
+                            android:layout_width="0.0dip"
+                            android:layout_height="40.0dip"
+                            android:layout_gravity="center|left"
+                            android:layout_marginStart="40.0dip"
+                            android:layout_marginEnd="20.0dip"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/blue_btn_effect"
+                            android:tag="1"
+                            android:text="@string/rate_us_text"
+                            android:textColor="@color/white"
+                            android:textSize="16.0sp" />
+
+                        <LinearLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+
+                        <Button
+                            android:id="@+id/btn_cancel"
+                            android:layout_width="0.0dip"
+                            android:layout_height="40.0dip"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center|right"
+                            android:layout_marginStart="30.0dip"
+                            android:layout_marginEnd="40.0dip"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/logout_btn_effect"
+                            android:focusable="true"
+                            android:tag="2"
+                            android:text="@string/remember_me_later"
+                            android:textColor="@color/white"
+                            android:textSize="16.0sp" />
+
+                        <LinearLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

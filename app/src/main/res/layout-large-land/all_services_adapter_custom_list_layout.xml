@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_outer"
+    android:layout_width="fill_parent"
+    android:layout_height="120.0dip"
+    android:layout_margin="10.0dip"
+    android:background="@drawable/selector_list_multidns"
+    android:focusable="true"
+    android:layoutDirection="locale"
+    android:orientation="horizontal"
+    android:weightSum="8.0">
+
+    <ImageView
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:layout_weight="1.5"
+        android:background="#84000000"
+        android:layoutDirection="locale"
+        android:padding="10.0dip"
+        app:srcCompat="@drawable/ic_myservice" />
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="6.5"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:weightSum="4.0">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:layoutDirection="locale"
+            android:maxLines="1"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textDirection="locale"
+            android:textSize="16.0sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:layoutDirection="locale"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:paddingStart="10.0dip"
+                android:paddingEnd="10.0dip"
+                android:text="Pricing :"
+                android:textColor="@color/black"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pricing"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:text="$0000"
+                android:textColor="@color/black"
+                android:textDirection="locale"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:layoutDirection="locale"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:paddingStart="10.0dip"
+                android:paddingEnd="10.0dip"
+                android:text="Next Due Date :"
+                android:textColor="@color/black"
+                android:textDirection="locale"
+                android:textSize="12.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_next_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layoutDirection="locale"
+                android:text="$0000"
+                android:textColor="@color/black"
+                android:textDirection="locale"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:layoutDirection="locale"
+        android:padding="10.0dip"
+        android:src="@drawable/forward_arrow" />
+</LinearLayout>

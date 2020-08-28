@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_list_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/tv_channel_number"
+        android:layout_width="50.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="start"
+        android:layout_marginStart="2.0dip"
+        android:gravity="center"
+        android:paddingBottom="2.0dip"
+        android:src="@drawable/logo_placeholder_white"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16.0sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/tv_logo"
+        android:layout_width="50.0dip"
+        android:layout_height="40.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingBottom="2.0dip"
+        android:src="@drawable/logo_placeholder_white" />
+
+    <ImageView
+        android:id="@+id/tv_currently_playing"
+        android:layout_width="17.0dip"
+        android:layout_height="39.0dip"
+        android:layout_marginStart="10.0dip"
+        android:src="@drawable/player_play_newflow"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="40.0dip"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/live_sky_text"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/iv_favourite"
+            android:layout_width="40.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0.0dip"
+            android:background="@drawable/selector_favourite_vod"
+            android:src="@drawable/favourite_yellow"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:layoutDirection="locale">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_bg" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layoutDirection="locale">
+
+        <LinearLayout
+            android:id="@+id/ll_center_body"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            android:weightSum="4.0">
+
+            <LinearLayout
+                android:id="@+id/ll_layout_to_hide_top"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="4.0"
+                android:layoutDirection="locale"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <LinearLayout
+                        android:id="@+id/ll_left_box"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="0.0sp"
+                        android:layout_weight="0.9"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:layoutDirection="locale"
+                        android:orientation="vertical"
+                        android:tag="3">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="0.0sp"
+                            android:layoutDirection="locale"
+                            android:orientation="vertical"
+                            android:tag="3">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layoutDirection="locale"
+                                android:orientation="vertical"
+                                android:weightSum="1.0">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_video_box_1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0"
+                                    android:layoutDirection="locale"
+                                    android:nextFocusUp="@+id/rl_video_box_2"
+                                    android:nextFocusDown="@+id/rl_video_box_2">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_1"
+                                        android:layout_width="20.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_nst_player_sky_layout_1"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_toStartOf="@+id/rl_layout_to_hide_5"
+                                        android:layout_toEndOf="@+id/rl_layout_to_hide_1"
+                                        android:layoutDirection="locale">
+
+                                        <include
+                                            layout="@layout/nst_multi_player_1"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_video_box_2"
+                                        android:layout_width="200.0dip"
+                                        android:layout_height="180.0dip"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginEnd="7.0dip"
+                                        android:layout_marginBottom="5.0dip"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/line_multi"
+                                        android:layoutDirection="locale">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_layout_to_hide_2"
+                                            android:layout_width="0.0dip"
+                                            android:layout_height="fill_parent"
+                                            android:layout_alignParentStart="true"
+                                            android:layoutDirection="locale"
+                                            android:visibility="visible" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_nst_player_sky_layout_2"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent"
+                                            android:layout_toStartOf="@+id/rl_layout_to_hide_6"
+                                            android:layout_toEndOf="@+id/rl_layout_to_hide_2"
+                                            android:layoutDirection="locale">
+
+                                            <include
+                                                layout="@layout/nst_multi_player_2"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_layout_to_hide_6"
+                                            android:layout_width="5.0dip"
+                                            android:layout_height="fill_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:layoutDirection="locale"
+                                            android:visibility="visible" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_5"
+                                        android:layout_width="5.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentEnd="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_first_row_center_gap"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="5.0dip"
+                                    android:layoutDirection="locale"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_right_box"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="0.0sp"
+                        android:layout_weight="0.5"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:layoutDirection="locale"
+                        android:orientation="vertical"
+                        android:tag="3"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="0.0sp"
+                            android:layoutDirection="locale"
+                            android:orientation="vertical"
+                            android:tag="3">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layoutDirection="locale"
+                                android:orientation="vertical"
+                                android:weightSum="1.0">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_video_box_3"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="0.5"
+                                    android:layoutDirection="locale">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_3"
+                                        android:layout_width="5.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_nst_player_sky_layout_3"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_toStartOf="@+id/rl_layout_to_hide_7"
+                                        android:layout_toEndOf="@+id/rl_layout_to_hide_3"
+                                        android:layoutDirection="locale">
+
+                                        <include
+                                            layout="@layout/nst_multi_player_3"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_7"
+                                        android:layout_width="20.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentEnd="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_second_row_center_gap"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="5.0dip"
+                                    android:layoutDirection="locale"
+                                    android:visibility="visible" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_video_box_4"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="0.5"
+                                    android:layoutDirection="locale">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_4"
+                                        android:layout_width="5.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_nst_player_sky_layout_4"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_toStartOf="@+id/rl_layout_to_hide_8"
+                                        android:layout_toEndOf="@+id/rl_layout_to_hide_4"
+                                        android:layoutDirection="locale">
+
+                                        <include
+                                            layout="@layout/nst_multi_player_4"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="fill_parent" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_layout_to_hide_8"
+                                        android:layout_width="20.0dip"
+                                        android:layout_height="fill_parent"
+                                        android:layout_alignParentEnd="true"
+                                        android:layoutDirection="locale"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_layout_to_hide_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip"
+                android:orientation="vertical"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

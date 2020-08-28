@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_subtitle_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginTop="50.0dip"
+        android:layout_marginEnd="50.0dip">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff">
+
+            <LinearLayout
+                android:id="@+id/rl_video_track"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffcecaca"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/on_demand_video"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12.0dip"
+                        android:layout_marginBottom="12.0dip"
+                        android:text="@string/video_tracks"
+                        android:textColor="@color/black"
+                        android:textSize="24.0sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_radio_group_video"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_video_track"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_no_video_track"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:padding="10.0dip"
+                        android:text="@string/no_video_track_found"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18.0dip"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/video_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="20.0dip"
+                        android:paddingTop="10.0dip"
+                        android:paddingBottom="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_audio_track"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_radio_group_video"
+                android:layout_marginTop="10.0dip"
+                android:background="#ffcecaca"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/on_demand"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12.0dip"
+                        android:layout_marginBottom="12.0dip"
+                        android:text="@string/audio_tracks"
+                        android:textColor="@color/black"
+                        android:textSize="24.0sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_audio_track"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_no_audio_track"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:padding="10.0dip"
+                        android:text="@string/no_audio_found"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18.0dip"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/audio_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="20.0dip"
+                        android:paddingTop="10.0dip"
+                        android:paddingBottom="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_subtitle_track"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_radio_group"
+                android:layout_marginTop="10.0dip"
+                android:background="#ffcecaca"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12.0dip"
+                        android:layout_marginBottom="12.0dip"
+                        android:text="@string/subtitles_tracks"
+                        android:textColor="@color/black"
+                        android:textSize="24.0sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_subtitle_track"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_subtitle_track"
+                android:layout_marginBottom="20.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_no_subtitle_track"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:padding="10.0dip"
+                        android:text="@string/no_subtitle_found"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="18.0dip"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/subtitle_radio_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="20.0dip"
+                        android:paddingTop="5.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_delay"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/subtitle_delay_minus"
+                            android:layout_width="62.0dip"
+                            android:layout_height="48.0dip"
+                            android:layout_gravity="center"
+                            android:background="@drawable/selector_checkbox"
+                            android:cropToPadding="false"
+                            android:focusable="true"
+                            android:foreground="?android:selectableItemBackground"
+                            android:padding="5.0dip"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/minus_icon" />
+
+                        <TextView
+                            android:id="@+id/subtitle_delay_ms"
+                            android:layout_width="72.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_marginEnd="10.0dip"
+                            android:gravity="center_vertical"
+                            android:text="0 ms"
+                            android:textAlignment="center"
+                            android:textSize="17.0dip" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/subtitle_delay_plus"
+                            android:layout_width="62.0dip"
+                            android:layout_height="48.0dip"
+                            android:layout_gravity="center"
+                            android:background="@drawable/selector_checkbox"
+                            android:cropToPadding="false"
+                            android:focusable="true"
+                            android:foreground="?android:selectableItemBackground"
+                            android:padding="5.0dip"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/plus_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_browse_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Browse"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_subtitle_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/ll_subtitle_track"
+                android:background="#ffcecaca"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12.0dip"
+                        android:layout_marginBottom="12.0dip"
+                        android:text="@string/subtitles_settings"
+                        android:textColor="@color/black"
+                        android:textSize="24.0sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/rl_subtitle_settings"
+                android:layout_marginBottom="20.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="0.0sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip">
+
+                        <TextView
+                            android:id="@+id/tv_subtitle_font_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5.0dip"
+                            android:text="@string/subtitle_font_size"
+                            android:textColor="@color/black"
+                            android:textSize="20.0dip"
+                            android:visibility="visible" />
+
+                        <Spinner
+                            android:id="@+id/subtitle_font_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_marginEnd="10.0dip"
+                            android:background="@drawable/selector_login_fields"
+                            android:entries="@array/font_size_array"
+                            android:focusable="true"
+                            android:padding="5.0dip"
+                            android:prompt="@string/subtitle_font_size"
+                            android:spinnerMode="dialog"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textDirection="locale" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

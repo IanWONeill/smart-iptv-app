@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_common" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="40.0dip"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginEnd="40.0dip"
+        android:layout_marginBottom="30.0dip"
+        android:layoutDirection="locale"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_no_active_services"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="30.0dip"
+            android:fontFamily="@string/font_family_medium"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/no_fraud_services"
+            android:textColor="@color/white"
+            android:textDirection="locale"
+            android:textSize="20.0sp"
+            android:visibility="gone" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progress"
+            style="@style/SpinKitView.Large.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layoutDirection="locale"
+            app:SpinKit_Color="@color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="locale"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

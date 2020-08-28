@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/play"
+        android:title="@string/nav_play"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_add_to_fav"
+        android:title="@string/add_to_favourite" />
+    <item
+        android:id="@+id/nav_remove_from_fav"
+        android:title="@string/remove_from_favourite" />
+    <item
+        android:id="@+id/menu_series_details"
+        android:title="@string/menu_series_details" />
+</menu>

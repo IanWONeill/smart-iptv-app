@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/account_background"
+    android:layoutDirection="locale"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="50.0dip"
+        android:gravity="center_vertical"
+        android:layoutDirection="locale"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="140.0dip"
+            android:layout_height="80.0dip"
+            android:focusable="false"
+            android:layoutDirection="locale"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="20.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/my_services"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip"
+            android:layout_toEndOf="@+id/textView"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_toEndOf="@+id/separator2"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="@string/Service_Information"
+            android:textColor="@color/light_gray"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="06:30 am"
+            android:textColor="@android:color/white"
+            android:textDirection="locale"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4.0dip"
+            android:gravity="center"
+            android:layoutDirection="locale"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textDirection="locale"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140.0dip"
+            android:layout_marginEnd="140.0dip"
+            android:background="#802a3543"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            android:paddingBottom="15.0dip"
+            android:textDirection="locale">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:padding="5.0dip"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="18.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="#a3ffffff"
+                android:layoutDirection="locale" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="locale"
+                android:orientation="vertical"
+                android:paddingStart="120.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Product"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_product"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:textDirection="locale"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/status"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Registration_Date"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_registration_date"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Next_Due_Date"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_next_due_date"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:textDirection="locale"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Recurring_Amount"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_recurring_amount"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Value"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Billing_Cycle"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_billing_cycle"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Value"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:textDirection="locale"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/Payment_Method"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_payment_method"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Value"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="@string/First_Time_Payment"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_first_time_payment"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:layoutDirection="locale"
+                        android:padding="5.0dip"
+                        android:text="Value"
+                        android:textColor="@color/white"
+                        android:textDirection="locale"
+                        android:textSize="18.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginEnd="30.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginStart="30.0dip"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/black_button_dark"
+                    android:focusable="true"
+                    android:layoutDirection="locale"
+                    android:tag="1"
+                    android:text="@string/back_button"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="16.0sp" />
+
+                <Button
+                    android:id="@+id/btn_service_home"
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/black_button_dark"
+                    android:focusable="true"
+                    android:layoutDirection="locale"
+                    android:tag="2"
+                    android:text="@string/Click_here_to_go_Service_Dashboard"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

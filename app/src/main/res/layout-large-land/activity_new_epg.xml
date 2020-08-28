@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_centerInParent="true"
+            android:fitsSystemWindows="true"
+            android:minHeight="?actionBarSize"
+            android:visibility="gone"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/tv_header_title"
+                    style="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@string/font_family_medium"
+                    android:text="@string/app_name"
+                    android:textSize="23.0sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/appbar_toolbar">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/sliding_tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:visibility="gone"
+                app:tabBackground="@drawable/tab_color_selector"
+                app:tabIndicatorColor="@color/white"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_cat_title"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip"
+                android:background="@drawable/background_screen_epg">
+
+                <LinearLayout
+                    android:id="@+id/ll_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#cf070f1b"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="120.0dip"
+                        android:layout_height="45.0dip"
+                        android:layout_marginStart="30.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginEnd="30.0dip"
+                        android:focusable="false"
+                        android:src="@drawable/full_white_logo" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/tv_cat_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginStart="10.0dip"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_toStartOf="@+id/time"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="20.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginEnd="10.0dip"
+                            android:layout_toStartOf="@+id/date"
+                            android:gravity="center"
+                            android:text="06:30 am"
+                            android:textColor="@color/white"
+                            android:textSize="22.0sp" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="4.0dip"
+                            android:gravity="center"
+                            android:paddingEnd="30.0sp"
+                            android:text="Monday,Janurary 12"
+                            android:textColor="@color/white"
+                            android:textSize="16.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/test1111"
+                android:layout_width="fill_parent"
+                android:layout_height="20.0dip"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true"
+                android:text="asljkdfklsajflskadf"
+                android:textColor="@color/white"
+                android:visibility="gone">
+
+                <requestFocus />
+            </TextView>
+
+            <com.nst.yourname.view.utility.NonSwipeableViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_cat_title"
+                android:layout_weight="1.0"
+                android:background="@drawable/background_screen_bottom_epg" />
+
+            <ProgressBar
+                android:id="@+id/pb_loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sliding_tabs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100.0dip"
+                android:indeterminate="true"
+                android:theme="@style/whiteLoader" />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+</LinearLayout>

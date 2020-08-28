@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/player_selection_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120.0dip"
+            android:layout_height="45.0dip"
+            android:focusable="false"
+            android:src="@drawable/full_white_logo" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/logo"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/separator"
+            android:gravity="center"
+            android:text="@string/settings_small"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/separator_second"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/textView"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="@color/light_gray"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/textView_second"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toEndOf="@+id/separator_second"
+            android:gravity="center"
+            android:text="@string/external_players"
+            android:textColor="@color/light_gray"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_toStartOf="@+id/date"
+            android:gravity="center"
+            android:text="06:30 am"
+            android:textColor="@android:color/white"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center"
+            android:paddingEnd="30.0dip"
+            android:text="Monday,Janurary 12"
+            android:textColor="#ffcccccc"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_add_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_add_more"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center|right"
+                android:focusable="false"
+                android:paddingRight="5.0dip"
+                android:src="@drawable/add_more_user"
+                android:tag="7" />
+
+            <TextView
+                android:id="@+id/tv_add_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5.0dip"
+                android:text="@string/add_player"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textDirection="locale"
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_settings"
+        android:paddingStart="60.0dip"
+        android:paddingEnd="60.0dip">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_settings"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50.0dip"
+        android:gravity="center"
+        android:paddingStart="60.0dip"
+        android:paddingEnd="60.0dip">
+
+        <ProgressBar
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_no_data_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="60.0dip"
+        android:paddingEnd="60.0dip">
+
+        <ImageView
+            android:id="@+id/iv_add_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_more_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_player"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </LinearLayout>
+</RelativeLayout>

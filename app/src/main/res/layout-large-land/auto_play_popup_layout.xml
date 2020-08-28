@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_epg_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dark_black2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_next_episode"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/routing_background"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_next_episode"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/trasparent_black"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginTop="30.0dip"
+            android:layout_marginEnd="10.0dip"
+            android:layout_marginBottom="10.0dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:text="Up Next"
+                android:textColor="@color/white"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/tv_episode_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50.0dip"
+                android:gravity="center_horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="Next Episode"
+                android:textColor="@color/white"
+                android:textSize="24.0sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_determinate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_episode_title"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20.0dip"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true"
+                android:nextFocusDown="@+id/cancel_autoplay"
+                android:padding="15.0dip">
+
+                <view
+                    android:id="@+id/determinate"
+                    class="mbanje.kurt.fabbutton.FabButton"
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    android:background="@drawable/selector_checkbox"
+                    android:clickable="true"
+                    android:color="#ff6e9cff"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:src="@drawable/ic_fab_play"
+                    android:visibility="visible"
+                    app:fbb_autoStart="true"
+                    app:fbb_endBitmap="@drawable/ic_fab_complete"
+                    app:fbb_hideProgressOnComplete="true"
+                    app:fbb_progressColor="@color/white"
+                    app:fbb_progressWidthRatio="0.1"
+                    app:fbb_showEndBitmap="false"
+                    app:fbb_showShadow="true"
+                    app:layout_anchorGravity="end|bottom|center" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cancel_autoplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_determinate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/selector_checkbox"
+                android:focusable="true"
+                android:nextFocusUp="@+id/ll_determinate"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+                android:textSize="20.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
